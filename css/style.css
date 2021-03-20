@@ -28,7 +28,6 @@ nav li{
 
 }
 
-
 nav{
   background-color: #DEB887;
   padding: 25px 0; 
@@ -50,8 +49,6 @@ header p{
 }
 /*END STARTER CSS - DO NO CHANGE*/
 
-
-/*Req 1*/
 nav a{
   color: black;
   font-weight: bold;
@@ -88,10 +85,17 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-  /*Req 6b*/
-  /*Set background-image to header.jpg */
-  background-image: url(../images/header.jpg);
-  background-repeat: no-repeat;
+}
+
+h1{
+    background-attachment: fixed; /* Parallax effect */     
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    height: 200px; 
+    margin-bottom: 25px;
+    background-image: url(../images/h1.jpg);
+    background-repeat: no-repeat;
 }
 
 nav{
@@ -108,18 +112,15 @@ p {
     text-align: center;
 }
 
-/*Req 9*/
 .text{
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  /*Your code here:*/
   align-self: center;
 }
 
 .projects{
     min-height: 600px;
-    /*Your code here again.*/
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -132,6 +133,29 @@ p {
     margin: 10px;
     width: 300px;
   }
+
+.container{
+    /*Your Code Here*/
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 20px;
+  }
+
+.about_image{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+  }
+
+.about_text, #about p{
+    align-self: left;
+  }
+
+#contact, .contact{
+    background-color: #DEB887;
+}
 
 footer{
     background-color: #8B4513;
@@ -150,9 +174,6 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-      /*Set background-image to header.jpg */
-      background-image: url(../images/header.jpg);
-      background-repeat: no-repeat;
     }    
 
 .nav_links{
@@ -188,6 +209,11 @@ header{
     margin: 10px;
     width: 300px;
   }
+
+.about_image{
+    height: 200px;
+    margin: 10px;
+    width: 300px;
 /*You do not need to modify any code below this line.
 It is included for accessibility to turn off animations
 and movement for people who have modified their 
