@@ -141,7 +141,12 @@ p {
     text-align: left;
 }
 
-#contact, .contact{
+h2#projects{
+    margin-left: 0;
+} 
+
+h2#contact, .contact{
+    margin-left: 0;
     background-color: #DEB887;
 }
 
