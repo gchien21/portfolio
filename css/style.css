@@ -5,7 +5,8 @@ html{
 
 body{
   background-color: #CD853F;
-  font-size: 18px;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
   margin: 0;
   padding: 0;
 }
@@ -31,6 +32,7 @@ nav li{
 
 nav{
   background-color: #DEB887;
+  font-size: 18px;
   padding: 25px 0;
   text-align: center;
   display: flex;
@@ -98,7 +100,7 @@ p {
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  align-self: center;
+
 }
 
 .projects{
@@ -124,20 +126,15 @@ p {
 }
 
 .about_image{
-    margin: 15px;
-    width: 400px;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    margin: 0px;
     padding: 15px;
-    border: 1px;
+    width: 100%;
+    height: auto;
   }
 
 .about_text p{
     margin: 15px;
-    grid-row-start: 2;
-    grid-row-end: span 1;
     padding: 15px;
-    border: 1px;
     text-align: left;
 }
 
@@ -198,7 +195,11 @@ footer{
     background-color: #8B4513;
     color: white;
     padding: 30px;
-    text-align: center;
+}
+
+footer p{
+  text-align: center;
+  vertical-align: baseline;
 }
 
 @media all and (min-width: 880px){
@@ -257,7 +258,7 @@ header{
 }
 
 .about_image{
-    margin: 15px;
+    margin: 5px;
     width: 600px;
     grid-row-start: 1;
     grid-row-end: 2;
@@ -266,7 +267,11 @@ header{
   }
 
 .about_text p{
-    margin: 15px;
+    margin: 5px;
+
+    padding: 15px;
+    border: 1px;
+    text-align: left;
 }
 
 .container {
@@ -320,6 +325,13 @@ header{
     padding: 15px;
     border: 1px;
     text-align: center;
+}
+
+footer{
+  background-color: #8B4513;
+  color: white;
+  padding: 30px;
+  text-align: center;
 }
 
 @media screen and (prefers-reduced-motion: reduce){
