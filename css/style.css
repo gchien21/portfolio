@@ -33,7 +33,7 @@ nav li{
 nav{
   background-color: #DEB887;
   font-size: 18px;
-  padding: 25px 10px;
+  padding: 25px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
