@@ -172,6 +172,50 @@ h2#contact, .contact{
   text-align: center;
 }
 
+.form_container form{
+  border: 3px;
+  margin-left:20px;
+  margin-right:20px;
+  padding:10;
+}
+
+.form_container label{
+  display: inline-block;
+  margin-right:10px;
+  width:15%;
+}
+
+.form_container input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.form_container textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.form_container input[type=checkbox]{
+}
+
+.form_container input[type=submit] {
+  background-color: rgb(139,0,0);
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.form_container input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -229,7 +273,36 @@ footer p{
   padding: 0 10px;
 }
 
+@media only screen and (min-width: 650px){
+
+
+.about_text h2{
+  color:black;
+  margin: 20px;
+  text-align: left;
+  font-size: 26px;
+}
+
+  .about_text p{
+    font-size: 22px;
+    margin: 20px;
+    padding: 15px;
+    border:1px;
+    text-align: left;
+    color: rgb(139,0,0);
+}
+  
+  .form_container h2{
+    text-align: left;
+  }
+
+}
+
 @media all and (min-width: 880px){
+
+.logo{
+  text-align: left;
+}
 
 .nav{
     display: flex;
