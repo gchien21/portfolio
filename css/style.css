@@ -32,10 +32,10 @@ nav li{
 
 }
 
-nav{
+.nav{
   background-color: #DEB887;
   font-size: 18px;
-  padding: 25px 0px;
+  padding: 15px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -45,8 +45,13 @@ nav{
 
 nav a{
   color: black;
+  font-size: 22px;
   font-weight: bold;
   text-decoration: none;
+}
+
+.nav li{
+  margin-top: 10px;
 }
 
 a:hover {
@@ -409,13 +414,14 @@ footer p{
     grid-gap: 10px;
 }
 
-.about_image{
+.about_image image{
     margin: 15px;
     width: 100%;
     padding: 15px;
     border:1px;
     max-width: 600px;
-    height: auto;
+    height: 90%;
+    margin-right: 20px;
   }
 
 .about_text h2{
@@ -431,7 +437,6 @@ footer p{
     padding: 20px;
     border:1px;
     text-align: left;
-    color: rgb(139,0,0);
 }
   
   .form_container h2{
@@ -520,11 +525,14 @@ footer p{
   color:black;
   text-align: left;
   font-size: 28px;
+  margin-left: 20px;
+  margin-top:5px;
 }
 
 .about_text p{
     color:black;
     margin: 15px;
+    margin-left: 20px;
     padding: 15px;
     border:1px;
     text-align: left;
@@ -542,11 +550,11 @@ footer p{
 }
 
 @media screen and (prefers-reduced-motion: reduce){
-  .skip a{
+  a.skip{
     -webkit-transition: none; 
     transition: none;        
    }
-   #hammar_movement{
+  .hammer_logo{
     /* Stop the animation */
     animation-name: none;
     }
