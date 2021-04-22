@@ -4,7 +4,7 @@ html{
 }
 
 body{
-  background-color: #CD853F;
+  background-color: rgb(160,82,45);
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   margin: 0;
@@ -12,6 +12,8 @@ body{
 }
 
 h1{
+    color:rgb(128,0,0);
+    text-shadow: 2px 2px grey;
     font-size: 2em;
     text-align: center;
     line-height: 2;
@@ -82,7 +84,7 @@ a:hover {
   }
 
 header{
-    background: #8B4513;
+    background-color: #DEB887;
     border-bottom: 3px solid #A0522D;
     display: flex;
     flex-direction: column;
@@ -116,6 +118,65 @@ p {
 
 }
 
+.projects_grid_container {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  margin:auto;
+  perspective: 1000px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgb(128,0,0);
+
+}
+
+.flip-card-front p{
+  color: white;
+  padding: 25px 120px;
+  position: absolute;
+  bottom: 0;
+
+}
+
+.flip-card-back {
+  background-color: rgb(165,42,42);
+  transform: rotateY(180deg);
+}
+
 .projects{
     min-height: 600px;
     display: flex;
@@ -125,10 +186,46 @@ p {
     flex-wrap: wrap;
   }
 
-.projects img{
+  .projects img{
     border: 10px #A0522D solid;
     margin: 10px;
     width: 300px;
+  }
+
+  .hammer_logo{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    width: 5%;
+    height: auto;
+    display: block;
+    position:relative;
+    animation-name: hammar_movement;
+    animation-duration: 3s;
+    animation-delay: .5s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+
+  @-webkit-keyframes hammar_movement{
+    from {
+      left:-20px; top:0px; 
+      transform: rotate(0deg);
+    }
+    to {left:20px; top:0px
+      transform: rotate(360deg); 
+    }
+  }
+  
+  @keyframes hammar_movement{
+    from {
+      left:-20px; top:0px; 
+      transform: rotate(0deg);
+    }
+    to {left: 20px; top:0px
+      transform: rotate(360deg); 
+    }
   }
 
 .about_container {
@@ -293,6 +390,18 @@ footer p{
     text-align: right;
   }
 
+  .projects_grid_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    margin-left:0;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 15px;
+    margin: 0px;
+    padding: 15px;
+  }
+
   .about_container {
     display: grid;
     grid-template-columns: auto auto;
@@ -381,9 +490,19 @@ footer p{
     margin-top: 15px;
   }
 
+  .projects_grid_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-left:0;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 15px;
+    margin-top: 20px;
+    padding: 15px;
+  }
+
 .projects{
     min-height: 600px;
-    /*Your code here again.*/
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -424,10 +543,13 @@ footer p{
 
 @media screen and (prefers-reduced-motion: reduce){
   .skip a{
-    -webkit-transition: none; /* sets to default setting */
-    transition: none;        /* sets to default setting */
+    -webkit-transition: none; 
+    transition: none;        
    }
-
+   #hammar_movement{
+    /* Stop the animation */
+    animation-name: none;
+    }
   /*Turn off parallax*/
   header{
     background-attachment: initial;
