@@ -186,8 +186,6 @@ p {
   transform: rotateY(180deg);
 }
 
-
-
 .projects{
     display: flex;
     flex-direction: row;
@@ -613,14 +611,27 @@ footer p{
 }
 
 @media screen and (prefers-reduced-motion: reduce){
+  /* Stop the animation */
   a.skip{
     -webkit-transition: none; 
     transition: none;        
    }
   .hammer_logo{
-    /* Stop the animation */
     animation-name: none;
     }
+    .flip-card-inner {
+      transition: none;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(0deg);
+    }
+    .projects_container:hover .projects_img {
+      opacity: 1;
+    }
+    .middle{
+      display: none;
+    }
+  
   /*Turn off parallax*/
   h1{
     background-attachment: initial;
