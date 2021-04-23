@@ -254,20 +254,16 @@ p {
   @-webkit-keyframes hammar_movement{
     from {
       left:-20px; top:0px; 
-      transform: rotate(0deg);
     }
     to {left:20px; top:0px
-      transform: rotate(360deg); 
     }
   }
   
   @keyframes hammar_movement{
     from {
       left:-20px; top:0px; 
-      transform: rotate(0deg);
     }
     to {left: 20px; top:0px
-      transform: rotate(360deg); 
     }
   }
 
@@ -626,7 +622,7 @@ footer p{
     animation-name: none;
     }
   /*Turn off parallax*/
-  header{
+  h1{
     background-attachment: initial;
   }
 }
